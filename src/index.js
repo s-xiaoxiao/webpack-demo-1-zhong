@@ -1,4 +1,7 @@
 import x from "./x.js";
+import "./s.scss";
+import "./y.less";
+import "./z.styl";
 import png from "./assets/1.png";
 
 const div = document.getElementById("app");
@@ -19,3 +22,6 @@ button.onclick = () => {
     () => {}
   );
 };
+console.log(div);
+console.log(button);
+console.log(png);
