@@ -1,23 +1,12 @@
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-
-var path = require("path");
+const base = require("./webpack.config.base.js");
 
 module.exports = {
+  ...base,
   mode: "development",
-  entry: "./src/index.js",
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist"
   },
-  output: {
-    filename: "index.[contenthash].js"
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "xiaoxiao App",
-      template: "./src/assets/index.html"
-    })
-  ],
   module: {
     rules: [
       {
